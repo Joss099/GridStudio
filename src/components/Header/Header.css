@@ -1,0 +1,207 @@
+.header {
+  background: #171717;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center !important;
+  gap: 5px;
+}
+
+.logo-img {
+  height: 30px;
+  width: auto;
+}
+
+.header_name {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Navegación Desktop - Ahora a la derecha */
+.nav-desktop {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-desktop a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-desktop a:hover {
+  color: #b3e11f;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Menú Hamburguesa Mejorado */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 40px;
+  height: 50px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu-toggle span {
+  width: 120%;
+  height: 3px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  border-radius: 2px;
+}
+
+/* Animación mejorada del menú hamburguesa */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  width: 100%;
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  width: 100%;
+}
+
+/* Menú Mobile Mejorado */
+.mobile-menu {
+  display: none;
+  background: #171717;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu.active {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+.nav-mobile a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+}
+
+.nav-mobile a:last-child {
+  border-bottom: none;
+}
+
+.nav-mobile a:hover {
+  color: #b3e11f;
+  padding-left: 10px;
+}
+
+/* Overlay para fondo cuando el menú está abierto */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.mobile-overlay.active {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header {
+    padding: 0.8rem 0;
+  }
+
+  /* Asegurar que el header tenga suficiente altura en mobile */
+  .header-content {
+    min-height: 50px;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .nav-mobile {
+    padding: 0 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-mobile a {
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+
+  .mobile-menu {
+    padding: 1.5rem 0;
+  }
+}

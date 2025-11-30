@@ -1,0 +1,242 @@
+.pricing-page {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 120px 2rem 6rem 2rem; /* Increased top padding for header */
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid #333;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main-title .highlight {
+  color: #a3e635;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start; /* Prevent cards from stretching */
+}
+
+.pricing-card {
+  border-radius: 10px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Variants */
+.pricing-card.dark {
+  background-color: #111;
+  color: white;
+}
+
+.pricing-card.outlined {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+}
+
+.pricing-card.lime {
+  background-color: #a3e635;
+  color: black;
+}
+
+/* Content Styles */
+.plan-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.plan-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.plan-price {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.plan-btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: opacity 0.2s;
+}
+
+.plan-btn:hover {
+  opacity: 0.9;
+}
+
+.plan-btn.light {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.plan-btn.lime {
+  background-color: #a3e635;
+  color: black;
+}
+
+.plan-btn.black {
+  background-color: black;
+  color: #a3e635;
+}
+
+/* Features & Expansion */
+/* Features & Expansion */
+.plan-features-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.pricing-card.expanded .plan-features-content {
+  max-height: 500px; /* Adjust as needed */
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+
+.expand-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.expand-indicator:hover {
+  opacity: 1;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+  font-size: 0.8rem;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.features-label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.check-icon {
+  margin-right: 0.8rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.pricing-card.dark .check-icon,
+.pricing-card.outlined .check-icon {
+  /* background-color: white; */
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 3px; Adjust icon size inside circle */
+}
+
+.pricing-card.lime .check-icon {
+  /* background-color: black; */
+  width: 15px;
+  fill: #000;           
+  height: 15px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 3px; */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-page {
+    padding: 100px 1rem 4rem 1rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .pricing-card {
+    padding: 2rem;
+  }
+}
+
+.space {
+  margin-bottom: 100px;
+}
