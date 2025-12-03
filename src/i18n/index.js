@@ -69,23 +69,23 @@ const en = {
     //Projects
     "projects": {
       "project1": {
-        "title": "Finding the Way",
-        "category": "Branding", 
+        "title": "Pink Flash",
+        "category": "Visual identity", 
         "overview": "This represents Project One. You are the source of your own work and you can be found in the book. Our own work is also included in the book, and our business has been done with many other sources.",
-        "capability": "Our Branding Systems will find the key components to successful brand identity.",
-        "team": "Branding Team: Focus on creating memorable visual identities and brand experiences.",
+        "capability": "Our Web Design Systems will find the key components to successful brand identity.",
+        "team": "Web Design Team: Focus on creating memorable visual identities and brand experiences.",
         "achievements": "During the last year, we have successfully launched 10+ brand identities with 95% client satisfaction."
       },
       "project2": {
-        "title": "Spaceship Repair Station", 
-        "category": "Web Design",
+        "title": "Libreros", 
+        "category": "Visual identity",
         "overview": "This represents Project Two. We create stunning web experiences that captivate users and drive engagement.",
         "capability": "Our Web Design Systems create intuitive and beautiful user interfaces.",
         "team": "Web Design Team: Specialists in UI/UX design and front-end development.",
         "achievements": "Delivered 15+ responsive websites with 40% increase in user engagement."
       },
             "project3": {
-        "title": "Piece for a shipping...", 
+        "title": "Online shopping", 
         "category": "Development",
         "overview": "This represents Project Two. We create stunning web experiences that captivate users and drive engagement.",
         "capability": "Our Web Design Systems create intuitive and beautiful user interfaces.",
@@ -93,24 +93,24 @@ const en = {
         "achievements": "Delivered 15+ responsive websites with 40% increase in user engagement."
       },
             "project4": {
-        "title": "Project Four", 
-        "category": "Marketing",
+        "title": "Ficohsa", 
+        "category": "Social media",
         "overview": "This represents Project Two. We create stunning web experiences that captivate users and drive engagement.",
         "capability": "Our Web Design Systems create intuitive and beautiful user interfaces.",
         "team": "Web Design Team: Specialists in UI/UX design and front-end development.",
         "achievements": "Delivered 15+ responsive websites with 40% increase in user engagement."
       },
             "project5": {
-        "title": "Project Five", 
-        "category": "UI/UX",
+        "title": "Robot", 
+        "category": "Concept Art",
         "overview": "This represents Project Two. We create stunning web experiences that captivate users and drive engagement.",
         "capability": "Our Web Design Systems create intuitive and beautiful user interfaces.",
         "team": "Web Design Team: Specialists in UI/UX design and front-end development.",
         "achievements": "Delivered 15+ responsive websites with 40% increase in user engagement."
       },
             "project6": {
-        "title": "Online Catalog", 
-        "category": "Mobile App",
+        "title": "Lost", 
+        "category": "Concept Art",
         "overview": "This represents Project Two. We create stunning web experiences that captivate users and drive engagement.",
         "capability": "Our Web Design Systems create intuitive and beautiful user interfaces.",
         "team": "Web Design Team: Specialists in UI/UX design and front-end development.",
@@ -277,8 +277,8 @@ const es = {
     //Proyecto 1
 
     "project1": {
-      "title": "Proyecto 1", 
-      "category": "Branding", 
+      "title": "Pink Flash", 
+      "category": "Visual identity", 
       "overview": "This represents Project One. You are the source of your own work and you can be found in the book. Our own work is also included in the book, and our business has been done with many other sources.",
       "capability": "Our Branding Systems will find the key components to successful brand identity.",
       "team": "Branding Team: Focus on creating memorable visual identities and brand experiences.",
@@ -286,8 +286,8 @@ const es = {
     },
     //Proyecto 2
     "project2": {
-      "title": "Proyecto 2", 
-      "category": "Web Design",
+      "title": "Libreros", 
+      "category": "Visual identity",
       "overview": "This represents Project Two. We create stunning web experiences that captivate users and drive engagement.",
       "capability": "Our Web Design Systems create intuitive and beautiful user interfaces.",
       "team": "Web Design Team: Specialists in UI/UX design and front-end development.",
@@ -295,7 +295,7 @@ const es = {
     },
     //Proyecto 3
     "project3": {
-      "title": "Proyecto 3", 
+      "title": "Tienda en línea", 
       "category": "Development",
       "overview": "This represents Project Three. We build robust and scalable applications using cutting-edge technologies.",
       "capability": "Our Development Systems ensure high-performance and maintainable code.",
@@ -304,8 +304,8 @@ const es = {
     },
     //Proyecto 4
     "project4": {
-      "title": "Proyecto 4",
-      "category": "Marketing",
+      "title": "Ficohsa",
+      "category": "Social media",
       "overview": "This represents Project Four. We develop comprehensive marketing strategies that drive growth.",
       "capability": "Our Marketing Systems analyze data to create effective campaigns.",
       "team": "Marketing Team: Data-driven specialists in digital marketing and analytics.",
@@ -313,8 +313,8 @@ const es = {
     },
     //Proyecto 5
     "project5": {
-      "title": "Proyecto 5",
-      "category": "UI/UX",
+      "title": "Robot",
+      "category": "Concept Art",
       "overview": "This represents Project Five. We design user-centered experiences that solve real problems.",
       "capability": "Our UI/UX Systems focus on user research and iterative design.",
       "team": "UI/UX Team: User experience researchers and interface designers.",
@@ -322,8 +322,8 @@ const es = {
     },
     //Proyecto 6
     "project6": {
-      "title": "Proyecto 6",
-      "category": "Mobile App",
+      "title": "Perdido",
+      "category": "Concept Art",
       "overview": "This represents Project Six. We create native and cross-platform mobile applications.",
       "capability": "Our Mobile Systems deliver seamless experiences across all devices.",
       "team": "Mobile Team: iOS and Android developers with focus on performance.",

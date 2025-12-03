@@ -34,11 +34,16 @@ const RecentWork = ({ id }) => {
             >
               <div className="work-item">
                 <div className="work-image">
-                  <img src={project.image} alt={project.title} /> {/* ← Ya traducido */}
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    loading="lazy"
+                    decoding="async"
+                  /> 
                   <div className="work-overlay">
                     <div className="work-info">
-                      <h3>{project.title}</h3> {/* ← Ya traducido */}                               
-                      <span>{project.category}</span> {/* ← Ya traducido */}
+                      <h3>{project.title}</h3>                      
+                      <span>{project.category}</span> 
                     </div>
                   </div>
                 </div>

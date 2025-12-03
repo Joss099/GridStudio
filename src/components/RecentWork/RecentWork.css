@@ -32,7 +32,7 @@
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/3;
   transition: transform 0.3s ease;
 }
 
@@ -164,7 +164,7 @@
   }
 
   .work-item {
-    aspect-ratio: 16/9;
+    aspect-ratio: 10/9;
   }
 
   .work-overlay {

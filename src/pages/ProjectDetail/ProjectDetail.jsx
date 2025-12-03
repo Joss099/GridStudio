@@ -96,6 +96,8 @@ const ProjectDetail = () => {
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
                   className="project-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
