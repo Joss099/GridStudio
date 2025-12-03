@@ -13,6 +13,15 @@ const ProjectDetail = () => {
   const { t } = useTranslation();
   // Usar el hook en lugar de importar projectsData directamente
   const { getAllProjectsArray, getProjectById } = useProjects();
+  const [selectedImage, setSelectedImage] = React.useState(null);
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const handleCloseLightbox = () => {
+    setSelectedImage(null);
+  };
 
   // Encontrar el proyecto actual por ID
   const project = getProjectById(parseInt(id));
@@ -91,7 +100,7 @@ const ProjectDetail = () => {
         <div className="project-images-section">
           <div className="images-grid">
             {project.images.map((image, index) => (
-              <div key={index} className="project-image-container">
+              <div key={index} className="project-image-container" onClick={() => handleImageClick(image)}>
                 <img
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
@@ -103,6 +112,18 @@ const ProjectDetail = () => {
             ))}
           </div>
         </div>
+
+        {/* Lightbox Overlay */}
+        {selectedImage && (
+          <div className="lightbox-overlay" onClick={handleCloseLightbox}>
+            <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+              <button className="lightbox-close" onClick={handleCloseLightbox}>
+                &times;
+              </button>
+              <img src={selectedImage} alt="Enlarged view" className="lightbox-image" />
+            </div>
+          </div>
+        )}
 
         {/* Navegación */}
         <footer className="project-navigation">
