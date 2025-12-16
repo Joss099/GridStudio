@@ -16,7 +16,8 @@ const RecentWork = ({ id }) => {
   };
 
   // Usar el hook para obtener los proyectos (YA VIENEN TRADUCIDOS)
-  const projects = getAllProjectsArray();
+  // Mostrar solo los primeros 6 proyectos
+  const projects = getAllProjectsArray().slice(0, 6);
 
   return (
     <section id={id} className="recent-work">
