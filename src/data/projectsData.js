@@ -2,30 +2,30 @@
 
 //Visual Identity
 //Project1
-import VisualIdentityWork1 from "../assets/images/VisualIdentity-Work1.png";
-import VisualIdentityIMG1 from "../assets/images/VisualIdentity-IMG1.png";
-import VisualIdentityIMG2 from "../assets/images/VisualIdentity-IMG2.png";
+import VisualIdentityWork1 from "../assets/images/VisualIdentity-Work1.webp";
+import VisualIdentityIMG1 from "../assets/images/VisualIdentity-IMG1.webp";
+import VisualIdentityIMG2 from "../assets/images/VisualIdentity-IMG2.webp";
 // Project2
-import VisualIdentityWork2 from "../assets/images/VisualIdentity-Work2.png";
+import VisualIdentityWork2 from "../assets/images/VisualIdentity-Work2.webp";
 
 //WebDesign
 //Project1
-import WebDesignWork1 from "../assets/images/WebDesign-Work1.png";
-import WebDesignIMG1 from "../assets/images/WebDesign-IMG1.png";
+import WebDesignWork1 from "../assets/images/WebDesign-Work1.webp";
+import WebDesignIMG1 from "../assets/images/WebDesign-IMG1.webp";
 
 //Social Media
 //Project1
-import SocialMediaWork1 from "../assets/images/SocialMedia-Work1.png";
-import SocialMediaIMG1 from "../assets/images/SocialMedia-IMG1.png";
+import SocialMediaWork1 from "../assets/images/SocialMedia-Work1.webp";
+import SocialMediaIMG1 from "../assets/images/SocialMedia-IMG1.webp";
 
 //Concept Art
 //Project1
-import ConceptArtWork1 from "../assets/images/ConceptArt-Work1.jpg";
-import ConceptArtIMG1 from "../assets/images/ConceptArt-IMG1.jpg";
+import ConceptArtWork1 from "../assets/images/ConceptArt-Work1.webp";
+import ConceptArtIMG1 from "../assets/images/ConceptArt-IMG1. webp";
 
 //Project2
-import ConceptArtWork2 from "../assets/images/ConceptArt-Work2.png";
-import ConceptArtIMG2 from "../assets/images/ConceptArt2-IMG1.jpg";
+import ConceptArtWork2 from "../assets/images/ConceptArt-Work2.webp";
+import ConceptArtIMG2 from "../assets/images/ConceptArt2-IMG1.webp";
 
 // Exportamos solo las imágenes para usarlas en cualquier idioma  
 export const projectImages = {
