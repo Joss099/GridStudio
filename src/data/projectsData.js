@@ -21,7 +21,7 @@ import SocialMediaIMG1 from "../assets/images/SocialMedia-IMG1.webp";
 //Concept Art
 //Project1
 import ConceptArtWork1 from "../assets/images/ConceptArt-Work1.webp";
-import ConceptArtIMG1 from "../assets/images/ConceptArt-IMG1. webp";
+import ConceptArtIMG1 from "../assets/images/ConceptArt-IMG1.webp";
 
 //Project2
 import ConceptArtWork2 from "../assets/images/ConceptArt-Work2.webp";
