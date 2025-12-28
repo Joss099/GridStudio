@@ -28,6 +28,12 @@ export const es = {
     "services.webdesign": "Diseño web", 
     "services.maintenance": "Mantenimiento web",
     "services.description": "Texto descriptivo en español aquí",
+    "services.visualDesc": "Creamos identidades visuales sólidas y coherentes que reflejan la esencia y valores de tu marca.",
+    "services.socialDesc": "Diseños atractivos para redes sociales que aumentan el engagement y fortalecen tu marca.",
+    "services.webdevDesc": "Sitios web personalizados, rápidos y escalables, desarrollados con tecnologías modernas.",
+    "services.advertisingDesc": "Diseños publicitarios creativos que comunican tu mensaje de forma clara y efectiva.",
+    "services.webdesignDesc": "Diseño web centrado en el usuario, combinando estética, usabilidad y conversión.",
+    "services.maintenanceDesc": "Mantenimiento continuo para mantener tu sitio web seguro, actualizado y funcional.",
 
     //Recent Work
     "recentWork.title": "Trabajo reciente", 
@@ -81,6 +87,25 @@ export const es = {
       
       "strategy": "Estrategia",
       "strategyDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, voluptas delectus. Recusandae iste aspernatur eius",
+
+      // Descripciones detalladas y estrategias por servicio
+      "visualDesc": "Creamos identidades visuales sólidas y coherentes que reflejan la esencia y valores de tu marca.",
+      "visualStrategy": "Nuestra estrategia se centra en entender la esencia de tu marca y traducirla en un lenguaje visual que resuene con tu audiencia.",
+
+      "socialDesc": "Diseños atractivos optimizados para redes sociales que aumentan el engagement y el reconocimiento de marca.",
+      "socialStrategy": "Analizamos tendencias y el comportamiento de tu audiencia para crear contenido que capture la atención e impulse la interacción.",
+
+      "webDevDesc": "Sitios web personalizados, rápidos y escalables, desarrollados con tecnologías modernas y mejores prácticas.",
+      "webDevStrategy": "Priorizamos el rendimiento, la seguridad y la escalabilidad para asegurar que tu sitio web soporte el crecimiento de tu negocio.",
+
+      "advertisingDesc": "Piezas publicitarias creativas diseñadas para comunicar tu mensaje de forma clara y efectiva.",
+      "advertisingStrategy": "Nos enfocamos en visuales de alto impacto y mensajes claros para maximizar la conversión y el conocimiento de marca.",
+
+      "webDesignDesc": "Diseño web centrado en el usuario que combina estética, usabilidad y conversión.",
+      "webDesignStrategy": "Diseñamos pensando en el usuario, asegurando una experiencia intuitiva y agradable que guíe a los visitantes hacia tus objetivos.",
+
+      "maintenanceDesc": "Actualizaciones y mantenimiento regular para mantener tu sitio web funcionando sin problemas.",
+      "maintenanceStrategy": "Monitoreo proactivo y actualizaciones periódicas para prevenir problemas y asegurar que tu sitio esté siempre disponible y seguro.",
       
       "project1": "Ejemplo de Identidad Visual",
       "project2": "Proyecto de Redes Sociales",

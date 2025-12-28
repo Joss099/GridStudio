@@ -27,6 +27,12 @@ export const en = {
     "services.webdesign": "Web design",
     "services.maintenance": "Website Maintenance",
     "services.description": "Loren itspum dest aun de maunsi nandu tren dow",
+    "services.visualDesc": "We create strong and consistent visual identities that reflect your brand’s personality and values.",
+    "services.socialDesc": "Eye-catching designs optimized for social media to boost engagement and brand recognition.",
+    "services.webdevDesc": "Custom, fast and scalable websites built with modern technologies and best practices.",
+    "services.advertisingDesc": "Creative advertising pieces designed to communicate your message clearly and effectively.",
+    "services.webdesignDesc": "User-focused web design that combines aesthetics, usability and conversion.",
+    "services.maintenanceDesc": "Regular updates and maintenance to keep your website running smoothly.",
     
     //Recent Work
     "recentWork.title": "Recent Work", 
@@ -82,6 +88,25 @@ export const en = {
       
       "strategy": "Strategy",
       "strategyDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, voluptas delectus. Recusandae iste aspernatur eius",
+
+      // Detailed descriptions and strategies per service
+      "visualDesc": "We create strong and consistent visual identities that reflect your brand’s personality and values.",
+      "visualStrategy": "Our strategy focuses on understanding your brand essence and translating it into a visual language that resonates with your target audience.",
+
+      "socialDesc": "Eye-catching designs optimized for social media to boost engagement and brand recognition.",
+      "socialStrategy": "We analyze trends and your audience's behavior to create content that captures attention and drives interaction.",
+
+      "webDevDesc": "Custom, fast and scalable websites built with modern technologies and best practices.",
+      "webDevStrategy": "We prioritize performance, security, and scalability to ensure your website supports your business growth.",
+
+      "advertisingDesc": "Creative advertising pieces designed to communicate your message clearly and effectively.",
+      "advertisingStrategy": "We focus on high-impact visuals and clear messaging to maximize conversion and brand awareness.",
+
+      "webDesignDesc": "User-focused web design that combines aesthetics, usability and conversion.",
+      "webDesignStrategy": "We design with the user in mind, ensuring an intuitive and enjoyable experience that guides visitors towards your goals.",
+
+      "maintenanceDesc": "Regular updates and maintenance to keep your website running smoothly.",
+      "maintenanceStrategy": "Proactive monitoring and regular updates to prevent issues and ensure your site is always available and secure.",
       
       "project1": "Visual Identity Example",
       "project2": "Social Media Project", 

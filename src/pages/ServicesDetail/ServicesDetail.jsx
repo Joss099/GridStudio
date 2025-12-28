@@ -5,6 +5,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./ServicesDetail.css";
 
 import { useTranslation } from "react-i18next";
+import { useProjects } from "../../data/useProjects";
+import ImageLoader from "../../components/ImageLoader/ImageLoader"; // Import ImageLoader
+
 import NextServiceIcon from "../../assets/images/services/arrow.svg";
 import VisualMainImage from "../../assets/images/Visual.webp";
 import WebMainImage from "../../assets/images/Web.webp";
@@ -13,85 +16,92 @@ import AdvertisingMainImage from "../../assets/images/Advertising.webp";
 import WebDesignMainImage from "../../assets/images/WebDesign.webp";
 import MaitenanceMainImage from "../../assets/images/Maintenance.webp";
 
-import RecentProjectImage from "../../assets/images/Visual2.png";
-
 const ServicesDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { t } = useTranslation();
+  const { getAllProjectsArray } = useProjects();
 
-  // Datos de todos los servicios - AHORA CON TRADUCCIONES
+  // Obtener el servicio actual basado en el ID
+  const serviceId = id ? parseInt(id) : 1;
+
+  // Lógica para obtener el proyecto relevante
+  const allProjects = getAllProjectsArray();
+
+  const getRelevantProject = (sId) => {
+    // Definir categorías de proyecto deseadas para cada ID de servicio
+    const categoryMapping = {
+        1: "Visual identity",
+        2: "Social media",
+        3: "Development",
+        4: "Social media", // Publicidad -> Social media
+        5: "Development",     // Diseño Web -> Development o Visual Identity
+        6: "Development"      // Mantenimiento -> Development
+    };
+
+    const targetCategory = categoryMapping[sId] || "Visual identity";
+    
+    // Buscar el primer proyecto que coincida con la categoría
+    const foundProject = allProjects.find(p => p.category === targetCategory);
+    
+    // Si no encuentra, devolver el primero general (fallback)
+    return foundProject || allProjects[0];
+  };
+
+  const relevantProject = getRelevantProject(serviceId);
+
+  // Manejador para ir al detalle del proyecto
+  const handleProjectClick = () => {
+    if (relevantProject) {
+      navigate(`/projects/${relevantProject.id}`);
+    }
+  };
+
   const allServices = {
     1: {
       title: t("servicesDetail.visualIdentity"),
       category: t("servicesDetail.branding"),
-      description: t("servicesDetail.description"),
+      description: t("servicesDetail.visualDesc"),
+      strategy: t("servicesDetail.visualStrategy"),
       serviceMainImage: VisualMainImage,
-      recentProject: {
-        title: t("servicesDetail.project1"),
-        description: t("servicesDetail.viewInPortfolio"),
-        image: RecentProjectImage,
-      },
     },
     2: {
       title: t("servicesDetail.socialMedia"),
       category: t("servicesDetail.socialMediaCategory"),
-      description: t("servicesDetail.description"),
+      description: t("servicesDetail.socialDesc"),
+      strategy: t("servicesDetail.socialStrategy"),
       serviceMainImage: SocialMainImage,
-      recentProject: {
-        title: t("servicesDetail.project2"),
-        description: t("servicesDetail.viewInPortfolio"),
-        image: RecentProjectImage,
-      },
     },
     3: {
       title: t("servicesDetail.webDevelopment"),
       category: t("servicesDetail.development"),
-      description: t("servicesDetail.description"),
+      description: t("servicesDetail.webDevDesc"),
+      strategy: t("servicesDetail.webDevStrategy"),
       serviceMainImage: WebMainImage,
-      recentProject: {
-        title: t("servicesDetail.project3"),
-        description: t("servicesDetail.viewInPortfolio"),
-        image: RecentProjectImage,
-      },
     },
     4: {
       title: t("servicesDetail.advertising"),
       category: t("servicesDetail.design"),
-      description: t("servicesDetail.description"),
+      description: t("servicesDetail.advertisingDesc"),
+      strategy: t("servicesDetail.advertisingStrategy"),
       serviceMainImage: AdvertisingMainImage,
-      recentProject: {
-        title: t("servicesDetail.project4"),
-        description: t("servicesDetail.viewInPortfolio"),
-        image: RecentProjectImage,
-      },
     },
     5: {
       title: t("servicesDetail.webDesign"),
       category: t("servicesDetail.uiux"),
-      description: t("servicesDetail.description"),
+      description: t("servicesDetail.webDesignDesc"),
+      strategy: t("servicesDetail.webDesignStrategy"),
       serviceMainImage: WebDesignMainImage,
-      recentProject: {
-        title: t("servicesDetail.project5"),
-        description: t("servicesDetail.viewInPortfolio"),
-        image: RecentProjectImage,
-      },
     },
     6: {
       title: t("servicesDetail.maintenance"),
       category: t("servicesDetail.maintenanceCategory"),
-      description: t("servicesDetail.description"),
+      description: t("servicesDetail.maintenanceDesc"),
+      strategy: t("servicesDetail.maintenanceStrategy"),
       serviceMainImage: MaitenanceMainImage,
-      recentProject: {
-        title: t("servicesDetail.project6"),
-        description: t("servicesDetail.viewInPortfolio"),
-        image: RecentProjectImage,
-      },
     },
   };
 
-  // Obtener el servicio actual basado en el ID
-  const serviceId = id ? parseInt(id) : 1;
   const serviceData = allServices[serviceId] || allServices[1];
 
   const handleNextService = () => {
@@ -108,7 +118,7 @@ const ServicesDetail = () => {
           <div className="services-detail-grid">
             {/* Columna 1: Imagen grande */}
             <div className="detail-main-visual">
-              <img
+              <ImageLoader
                 src={serviceData.serviceMainImage}
                 alt={serviceData.title}
                 className="detail-main-image"
@@ -127,17 +137,21 @@ const ServicesDetail = () => {
                 <div className="service-features">
                   <div className="feature">
                     <h4>{t("servicesDetail.strategy")}</h4>
-                    <p>{t("servicesDetail.strategyDescription")}</p>
+                    <p>{serviceData.strategy}</p>
                   </div>
                 </div>
               </div>
 
               {/* Parte inferior: Proyecto reciente */}
-              <div className="detail-recent-project">
+              <div 
+                className="detail-recent-project" 
+                onClick={handleProjectClick}
+                style={{ cursor: "pointer" }}
+              >
                 <div className="project-image-container">
-                  <img
-                    src={serviceData.recentProject.image}
-                    alt={serviceData.recentProject.title}
+                  <ImageLoader
+                    src={relevantProject.image}
+                    alt={relevantProject.title}
                     className="project-image"
                   />
                   {/* Overlay con información superpuesta */}
@@ -146,10 +160,10 @@ const ServicesDetail = () => {
                       {t("servicesDetail.recentWork")}
                     </span>
                     <h3 className="project-title2">
-                      {serviceData.recentProject.title}
+                      {relevantProject.title}
                     </h3>
                     <p className="project-description">
-                      {serviceData.recentProject.description}
+                      {relevantProject.overview ? (relevantProject.overview.length > 80 ? relevantProject.overview.substring(0, 80) + "..." : relevantProject.overview) : t("servicesDetail.viewInPortfolio")}
                     </p>
 
                     {/* Flecha indicadora de click */}
